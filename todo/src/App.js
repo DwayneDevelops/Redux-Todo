@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { TodoForm } from './components/TodoForm/TodoForm';
+import TodoList from './components/TodoList/TodoList';
+
 
 class App extends Component {
   constructor(){
@@ -9,16 +10,12 @@ class App extends Component {
       todos: []
     }
   }
-
-  componentDidMount(){
-    
-  }
   
   render() {
     return (
       <div className="App">
         <header className="App-header">
-         <TodoForm />
+         <TodoList />
         </header>
       </div>
     );
