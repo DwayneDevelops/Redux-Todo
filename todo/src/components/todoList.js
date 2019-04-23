@@ -11,7 +11,7 @@ class TodoList extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({ todos: event.target.value });
+    this.setState({ newTodo: event.target.value });
   }
 
   addTodo = e => {
@@ -28,6 +28,8 @@ class TodoList extends React.Component {
   render(){
     return (
       <div>
+        <h1>My List of Todos:</h1>
+
         {this.props.todos.map((todo, index) => (
           <h4 onClick={e => this.toggleComplete(e, index)} key={index}>
           {todo.value} {todo.completed && <i className="fas fa-dragon" />}
